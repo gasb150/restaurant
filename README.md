@@ -45,7 +45,7 @@ Move to the folder and select index.html, now Open the live server.
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](issues/).
+Feel free to check the [issues page](https://github.com/gasb150/restaurant/issues/1).
 
 ## Show your support
 
