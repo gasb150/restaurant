@@ -1,5 +1,14 @@
 #content {
     color: red;
-   background: url('./restaurant.jpg');
-   
-  }
+   /* background: url('./restaurant.jpg'); */
+   height: 100vh;
+   text-align: center;
+}
+.tabbler {
+    
+    width: 50%;
+}
+
+.tabs{
+    width: 33%;
+}
