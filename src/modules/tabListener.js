@@ -1,24 +1,25 @@
+import infoMenu from './menu'
+import infoHome from './home'
 const tabListener =( (document) => {
 
-     const clear = (document,id) => {
+     const clear = (document) => {
          
-        const info = document.getElementById('dividi')
-       info.innerHTML =''
-        id.appendChild(info)
+         const info = document.getElementById('dividi')
+        info.innerHTML =''
+       
         
-     };
+      };
 
     const fill = (document, id, info) => {
-        clear (document, id)
-        const fillInfo = document.getElementById('dividi')
-        fillInfo.setAttribute('class', "active")
-        fillInfo.appendChild(info)
         
-        id.appendChild(fillInfo)
+         clear (document, id)
+        const fillInfo = document.getElementById('dividi')
+        fillInfo.appendChild(info)
+       
     }
     
         
-    const tabListener = (document) => {
+    const tabListener = (document, content) => {
             
             console.log(document)
             const home = document.getElementById('home')
@@ -26,27 +27,27 @@ const tabListener =( (document) => {
              const contact = document.getElementById('contact')
              
              document.addEventListener('click', (e) =>{
-                let target = e.target;
+                let this_target = e.target;
                
                 do {
-                    if (target === contact) {
+                    if (this_target === contact) {
                         let info =infoContact(document)
                     fill(document, contact, info)
                     return;
-                    }else if (target === menu) {
+                    }else if (this_target === menu) {
                         let info = infoMenu(document)
                     fill(document, menu, info)
                         return ;
-                    } else if (target === home) {
-                        let info ="jasjas"
+                    } else if (this_target === home) {
+                        let info =infoHome(document)
                         fill(document, home, info)
                         return;
                     }
                 
-                target = target.parentNode;
-                
-            } while (target);
-            clear(document,contact)
+                this_target = this_target.parentNode;
+               
+            } while (this_target);
+            clear(document,content)
             
                      
              });
@@ -59,36 +60,20 @@ const tabListener =( (document) => {
 })();
 
 
-const infoMenu = (document) => {
 
-     let  ul = document.createElement('ul')
-     let  li1 = document.createElement('li')
-     let  li2 = document.createElement('li')
-     let  li3 = document.createElement('li')
-     let li4 = document.createElement('li')
-
-     li1.innerHTML = "Home"
-     li2.innerHTML = "Contact"
-     li3.innerHTML = "Where we are"
-     li4.innerHTML = "Work with us"
-    ul.appendChild(li1)
-    ul.appendChild(li2)
-    ul.appendChild(li3)
-    ul.appendChild(li4)
-    
-return ul
-}
 
 const infoContact = (document) => {
-    let divContact = document.createElement('div')
+    let contact = document.createElement('div');
     let title = document.createElement('h3')
     let text = document.createElement('p')
 
     title.innerHTML = 'Contact'
     text.innerHTML = 'sdihasiufhapiusdfhaisudbfipausdbf asdifubasdijf sd fasoid faishd fiahs dfh asdouf asoudf sid fajsh dfhjas dfouh asdof asidf asjid fuad udouas duof asdihf asuodhf uasdgfuasgdfioasdif asd fuasd fioasdbfisbdfouasbdfilas dfa so8dfbasidjf asd fasodfbsdfjbasidjfbaisdjbfiasdf asd9ufasdf asodif asi dfasudf iasudfijsdfu9is dfioausdbfas df8oasdf aisdfbas'
 
-    divContact.appendChild(title)
-    divContact.appendChild(text)
-    return divContact
+    contact.appendChild(title)
+    contact.appendChild(text)
+    return contact
 }
+
+
 export default tabListener

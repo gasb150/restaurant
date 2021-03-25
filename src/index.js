@@ -1,5 +1,8 @@
-import load from './pageload'
-import tabbing from './tabs'
+import load from './modules/pageload'
+import tabListener from './modules/tabListener';
+import tabbing from './modules/tabs'
+// tabbing();
 load.pageLoad()
+
 // load.pageClikc()
-tabbing(content);
+

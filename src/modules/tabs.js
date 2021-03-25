@@ -1,10 +1,11 @@
 
-import tabListener from './tabListener'
+ import tabListener from './tabListener'
 export default function tabbing(element){
     
 
          let tabs = document.createElement('div');
          tabs.setAttribute('class','tabbler');
+         
          element.appendChild(tabs);
 
          let homeButton = document.createElement('button');
@@ -33,9 +34,9 @@ export default function tabbing(element){
         info.setAttribute('id', 'dividi')
         tabs.appendChild(info)
         
-        tabListener.tabListener(document)
+        tabListener.tabListener(document, content)
         
-        
+       
 }
 
 
