@@ -12,7 +12,7 @@ export default function tabbing(element){
          let homeButton = document.createElement('button');
          homeButton.setAttribute('class', 'tabs')
           homeButton.setAttribute('id', 'home')
-         homeButton.innerHTML = "Tab One"
+         homeButton.innerHTML = "Home"
 
          tabs.appendChild(homeButton)
 
@@ -22,14 +22,14 @@ export default function tabbing(element){
         let menuButton = document.createElement('button');
         menuButton.setAttribute('class', 'tabs')
          menuButton.setAttribute('id', 'menu')
-        menuButton.innerHTML = "Tab two"
+        menuButton.innerHTML = "Menu"
 
         tabs.appendChild(menuButton);    
 
         let contactButton = document.createElement('button');
         contactButton.setAttribute('class', 'tabs')
          contactButton.setAttribute('id', 'contact')
-        contactButton.innerHTML = "Tab three"
+        contactButton.innerHTML = "Contact"
 
         tabs.appendChild(contactButton);
         
