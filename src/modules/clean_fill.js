@@ -9,9 +9,15 @@ const clefill = ( () => {
 
     const fill = (document, info) => { 
     clear (document);
+    const content = document.getElementById('content')
     const fillInfo = document.getElementById('dividi');
-    fillInfo.appendChild(info);
-    }
+    
+    
+   
+        fillInfo.appendChild(info);
+        content.appendChild(fillInfo);
+    
+}
     return{
     clear,
     fill

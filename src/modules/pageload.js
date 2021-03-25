@@ -1,5 +1,6 @@
 // import restauran from './restaurant.jpg';
-import '../style.css';
+import '../reset.css'
+import '../style.scss';
 import tabs from './tabs'
 
 

@@ -2,7 +2,8 @@
  import tabListener from './tabListener'
 export default function tabbing(element){
     
-
+        let nav = document.createElement('nav')
+        nav.setAttribute('class', 'nav-bar')
          let tabs = document.createElement('div');
          tabs.setAttribute('class','tabbler');
          
@@ -16,25 +17,31 @@ export default function tabbing(element){
          tabs.appendChild(homeButton)
 
         
-        let contactButton = document.createElement('button');
-        contactButton.setAttribute('class', 'tabs')
-         contactButton.setAttribute('id', 'contact')
-        contactButton.innerHTML = "Tab two"
-
-        tabs.appendChild(contactButton);
+       
 
         let menuButton = document.createElement('button');
         menuButton.setAttribute('class', 'tabs')
          menuButton.setAttribute('id', 'menu')
-        menuButton.innerHTML = "Tab three"
+        menuButton.innerHTML = "Tab two"
 
         tabs.appendChild(menuButton);    
+
+        let contactButton = document.createElement('button');
+        contactButton.setAttribute('class', 'tabs')
+         contactButton.setAttribute('id', 'contact')
+        contactButton.innerHTML = "Tab three"
+
+        tabs.appendChild(contactButton);
         
         const info = document.createElement('div')
         info.setAttribute('id', 'dividi')
         tabs.appendChild(info)
         
+        nav.appendChild(tabs)
+        content.appendChild(nav)
+        
         tabListener.tabListener(document, content)
+        
         
        
 }
