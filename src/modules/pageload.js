@@ -12,6 +12,7 @@ const print = () => {
             
             
             tabs(content)
+            
         }); 
     };
 
