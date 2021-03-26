@@ -1,4 +1,3 @@
-// import restauran from './restaurant.jpg';
 import '../reset.css';
 import '../style.scss';
 import tabs from './tabs';
