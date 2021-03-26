@@ -1,114 +1,135 @@
-h1{
-    font-size: 5rem;
+h1 {
+  font-size: 5rem;
+  font-weight: bold;
 }
-h2{
-    font-size: 3rem;
+
+h2 {
+  font-size: 3rem;
+  font-weight: bolder;
 }
-h3{
-    font-size: 1.5rem;
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: bolder;
+  background-color: rgba(216, 216, 216, 0.213);
 }
 
 #content {
+  /* background-color: blue; */
+  height: 100vh;
+  text-align: center;
+}
 
-    /* background-color: blue; */
-   height: 100vh;
-   text-align: center;
+.nav-bar {
+  text-align: right;
+
+  button {
+    background-color: white;
+    cursor: pointer;
+    border: 1px solid black;
+  }
 }
-.nav-bar{
-    text-align: right;
-    button{
-                background-color:white;
-        cursor: pointer;
-        border: 1px solid black;
-        
-    }
-}
+
 .tabbler {
-    
-    display: flex;
-    justify-content: space-evenly;
-    margin-left: 40%;
+  display: flex;
+  justify-content: space-evenly;
+  margin-left: 40%;
 }
 
-.tabs{
-     padding: 1% 10%;
-     margin-bottom: 5px;
+.tabs {
+  padding: 1% 10%;
+  margin-bottom: 5px;
 }
 
-.home-main, .menu-main, .contact-main{
-    display: flex;
-   height: 100vh;
-    flex-direction: column;
-    .home-container, .menu, .contact{
-        margin: auto;
-        color: white;
-    } 
-}
-.home-main{
-    background-image: url(./restaurant.jpg);
-   background-size: cover;
+.menu {
+  text-decoration: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 20px;
+  column-gap: 20px;
 
-}
-.menu-main{
-    background: linear-gradient(rgba(61, 61, 61, 0.5), rgba(78, 68, 68, 0.5)),
-     url(./menu.jpg);
-    background-position: right;
-    background-size: contain;
-}
-.menu{
-    
-    text-decoration: none;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    row-gap: 20px;
-    column-gap: 20px;
-    #menu1, #menu2, #menu3{
-        border-radius: 0 60px 0 0;
-        padding: 5%;
-        text-align:justify;
-        width: 23rem;
-        height: 23rem;
-        h3{
-            border-bottom: solid 2px yellow;
-            width: fit-content;
-        }
-        p{
-            padding: 10% 5%;
-        }
-    }
-    #menu1{
-        background-image: url(./breakfast.jpg);
-        background-size: cover;
-        color: black;
-    }
-    #menu2{
-        background-image: url(./lunch.jpg);
-        background-size: cover;
-        color: black;
-    }
-    #menu3{
-        background-image: url(./dinner.jpg);
-        background-size: cover;
-        color: black;
+  #menu1,
+  #menu2,
+  #menu3 {
+    border-radius: 0 60px 0 0;
+    padding: 5%;
+    text-align: justify;
+    width: 23rem;
+    height: 23rem;
+
+    h3 {
+      border-bottom: solid 2px yellow;
+      width: max-content;
+      padding: 1%;
+      margin-bottom: 5%;
     }
 
-   
-}
+    p {
+      background-color: rgba(216, 216, 216, 0.514);
+      padding: 10% 5%;
+    }
+  }
 
-.contact-main{
-    background-image: url(./contact.jpg);
+  #menu1 {
+    background-image: url(./breakfast.jpg);
     background-size: cover;
-    background-position-y: 80%;
+    color: black;
+  }
 
-    h2{
-        padding: 10%;
-    }
+  #menu2 {
+    background-image: url(./lunch.jpg);
+    background-size: cover;
+    color: black;
+  }
 
-    .chard{
-        padding: 10% 0;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        row-gap: 20px;
-    }
+  #menu3 {
+    background-image: url(./dinner.jpg);
+    background-size: cover;
+    color: black;
+  }
 }
 
+.home-main,
+.menu-main,
+.contact-main {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+
+  .home-container,
+  .menu,
+  .contact {
+    margin: auto;
+    color: white;
+  }
+}
+
+.home-main {
+  background-image: url(./restaurant.jpg);
+  background-size: cover;
+}
+
+.menu-main {
+  background:
+    linear-gradient(rgba(61, 61, 61, 0.5), rgba(78, 68, 68, 0.5)),
+    url(./menu.jpg);
+  background-position: right;
+  background-size: contain;
+}
+
+.contact-main {
+  background-image: url(./contact.jpg);
+  background-size: cover;
+  background-position-y: 80%;
+
+  h2 {
+    padding: 10%;
+  }
+
+  .chard {
+    padding: 10% 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 20px;
+  }
+}
