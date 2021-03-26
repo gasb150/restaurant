@@ -1,28 +1,23 @@
 // import restauran from './restaurant.jpg';
-import '../reset.css'
+import '../reset.css';
 import '../style.scss';
-import tabs from './tabs'
+import tabs from './tabs';
 
 
 const print = () => {
+  function pageLoad() {
+    window.addEventListener('load', () => {
+      const content = document.getElementById('content');
 
-    function pageLoad() {
 
-        window.addEventListener('load', () =>{
-             let content = document.getElementById('content');
-            
-            
-            tabs(content)
-            
-        }); 
-    };
+      tabs(content);
+    });
+  }
 
-    
-    
-    return{
-        pageLoad
-    }
 
-}
+  return {
+    pageLoad,
+  };
+};
 
-export default print()
+export default print();

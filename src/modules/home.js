@@ -1,19 +1,18 @@
 export default function infoHome(document) {
-    let divContent = document.createElement('div');
-    divContent.setAttribute('class', 'home-main')
-    let divSubContent = document.createElement('div')
-    divSubContent.setAttribute('class', 'home-container')
-    let title = document.createElement('h1');
-    
-    title.innerHTML = "RESTAURANT"
-    divSubContent.appendChild(title)
+  const divContent = document.createElement('div');
+  divContent.setAttribute('class', 'home-main');
+  const divSubContent = document.createElement('div');
+  divSubContent.setAttribute('class', 'home-container');
+  const title = document.createElement('h1');
 
-    let paragraph = document.createElement('p')
-    paragraph.innerHTML = 'Enjoy our food'
-    divSubContent.appendChild(paragraph)
+  title.innerHTML = 'RESTAURANT';
+  divSubContent.appendChild(title);
 
-    divContent.appendChild(divSubContent)
+  const paragraph = document.createElement('p');
+  paragraph.innerHTML = 'Enjoy our food';
+  divSubContent.appendChild(paragraph);
 
-    return divContent
-   
+  divContent.appendChild(divSubContent);
+
+  return divContent;
 }
